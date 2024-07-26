@@ -1,6 +1,6 @@
 ## To run the application
-Run 'npm install'
-Run 'ng serve'
+* Run 'npm install'
+* Run 'ng serve'
 
 
 
