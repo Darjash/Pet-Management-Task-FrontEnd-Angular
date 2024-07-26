@@ -1,3 +1,9 @@
+## To run the application
+Run 'npm install'
+Run 'ng serve'
+
+
+
 TASK
 
 TODO: 
