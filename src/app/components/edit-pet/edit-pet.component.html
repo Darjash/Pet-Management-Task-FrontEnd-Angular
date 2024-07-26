@@ -1,0 +1,54 @@
+<button class="btn btn-primary" type="submit" routerLink="/">Back</button>
+<h1 class="title">Edit</h1>
+
+<form [formGroup]="applyForm" (ngSubmit)="onSubmit()">
+<div class="mb-3">
+  <label for="petName" class="form-label">Name</label>
+  <input type="text" class="form-control" id="petName" placeholder="Name" formControlName="name" value={{pet.name}}>
+</div>
+
+<div class="mb-3">
+  <label for="petCode" class="form-label">Code</label>
+  <input type="text" class="form-control" id="idCode" placeholder="Code" formControlName="idCode" value={{pet.idCode}}/>
+</div>
+
+<div class="mb-3">
+  <label for="petType" class="form-label">Type</label>
+  <select id="petType" class="form-select" aria-label="Default select example" formControlName="type" value={{pet.type}}>
+    <option value="Cat">Cat</option>
+    <option value="Dog">Dog</option>
+    <option value="Horse">Horse</option>
+    <option value="Rabbit">Rabbit</option>
+    <option value="Parrot">Parrot</option>
+  </select>
+</div>
+
+<div class="mb-3">
+  <label for="furColor" class="form-label">Fur color</label>
+  <select id="furColor" class="form-select" aria-label="Default select example" formControlName="furColor" value={{pet.furColor}}>
+    <option value="Black">Black</option>
+    <option value="White">White</option>
+    <option value="Brown">Brown</option>
+    <option value="Yellow">Yellow</option>
+    <option value="Blue">Blue</option>
+  </select>
+</div>
+
+<div class="mb-3">
+  <label for="countryOfOrigin" class="form-label">Country of origin</label>
+  <select id="countryOfOrigin" class="form-select" aria-label="Default select example" formControlName="country" value={{pet.country}}>
+    <option value="Estonia">Estonia</option>
+    <option value="Latvia">Latvia</option>
+    <option value="Lithuania">Lithuania</option>
+    <option value="Finland">Finland</option>
+    <option value="Sweden">Sweden</option>
+    <option value="Norway">Norway</option>
+  </select>
+</div>
+
+<div class="d-grid col-12 mx-auto">
+  
+  <button class="btn btn-primary" type="submit">Save changes</button>
+</div>
+</form>
+<button [ngStyle]="{'marginTop':'20px'}" class="btn btn-danger" type="submit" (click)="onDeletePet(pet.id)">Delete pet</button>

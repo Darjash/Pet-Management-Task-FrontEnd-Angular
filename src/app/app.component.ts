@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PetsService } from './services/pets.service';
+import { Pet } from './Pet';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Pet-Management-App';
+
+
 }
