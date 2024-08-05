@@ -1,9 +1,10 @@
-<!-- <p>pets parent works!</p>
-<p>{{pets[0].name}} lkdflks</p> 
-<app-edit-pet-button 
-  *ngFor="let pet of pets" 
-  [pet]="pet">
-</app-edit-pet-button> -->
+<div style="display: flex; justify-content: flex-end;">
+  <button type="button" class="btn btn-secondary" *ngIf="!isAuthorised()" routerLink="login">Login</button>
+</div>
+<div style="display: flex; justify-content: flex-end;">
+  <button type="button" class="btn btn-secondary" *ngIf="isAuthorised()" (click)="logout()" routerLink="login">Logout</button>
+</div>
+
 <h1 class="title">Pets</h1>
 <button type="button" class="btn btn-primary" routerLink="addPet" >Add pet</button>
 <table class="table table-striped" *ngIf="hasPets()">

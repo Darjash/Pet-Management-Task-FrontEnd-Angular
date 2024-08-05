@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Pet } from '../../Pet';
 import { PetsService } from '../../services/pets.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../login/auth.service';
 
 @Component({
   selector: 'app-pets',
@@ -21,7 +22,10 @@ export class PetsComponent {
     country: ''
   };
 
-  constructor(private petsService: PetsService, private router: Router) {}
+  constructor(
+    private petsService: PetsService, 
+    private router: Router, 
+    private authService: AuthService) {}
 
   ngOnInit(): void{
     this.petsService.getPets().subscribe((pets) => {
@@ -50,6 +54,16 @@ export class PetsComponent {
 
     hasPets(): boolean {
      return this.pets !== null
+    }
+
+  isAuthorised(): boolean{
+    const token = localStorage.getItem('token');
+    return token!== null ? true : false;
   }
+
+  logout() {
+    this.authService.logout()
+    }
+
 }
 

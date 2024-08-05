@@ -9,6 +9,7 @@ import { PetsComponent } from './components/pets/pets.component';
 import { EditPetButtonComponent } from './components/edit-pet-button/edit-pet-button.component';
 import { AddPetComponent } from './components/add-pet/add-pet.component';
 import { EditPetComponent } from './components/edit-pet/edit-pet.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EditPetComponent } from './components/edit-pet/edit-pet.component';
     PetsComponent,
     EditPetButtonComponent,
     AddPetComponent,
-    EditPetComponent
+    EditPetComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

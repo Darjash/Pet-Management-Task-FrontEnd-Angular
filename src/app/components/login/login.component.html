@@ -1,0 +1,17 @@
+<div class="login-container"  style="width: 400px">
+  <h3>Login</h3>
+  <form (ngSubmit)="login()">
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-sm">Username:</span>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="username" [(ngModel)]="username" name="username" required>
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-sm">Password:</span>
+      <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"id="password" [(ngModel)]="password" name="password" required>
+    </div>
+    <div>
+     <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </form>
+</div>
